@@ -261,6 +261,16 @@ input, select, textarea {
 		top: 0;
 	}
 
+	#menu_bg
+	{
+		background: #000000 bottom left;
+		height: 100%;
+		left: 0;
+		opacity: 1;
+		position: fixed;
+		top: 0;
+	}
+
 	@-moz-keyframes bg {
 		0% {
 			-moz-transform: translate3d(0,0,0);
@@ -1308,4 +1318,46 @@ h1 {
   -o-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out;
   border: 0px;
+}
+
+/* Menu Buttons */
+
+.btn-group button {
+  background-color: transparent; /* Green background */
+  border: 1px solid #fff; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+  width:22%;
+  height: 200px;
+  margin-top: 2.5em;
+  font-size: 48px;
+  font-family: 'Orbitron', Verdana, sans-serif;
+}
+
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+  margin-right: 4%;
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  color: #000;
+  background: #44ee44;
+  background: -moz-linear-gradient(top,  #44ee44 0%, #aaffaa 70%, #44ee44 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#44ee44), color-stop(70%,#aaffaa), color-stop(100%,#44ee44));
+  background: -webkit-linear-gradient(top,  #44ee44 0%,#aaffaa 70%,#44ee44 100%);
+  background: -o-linear-gradient(top,  #44ee44 0%,#aaffaa 70%,#44ee44 100%);
+  background: -ms-linear-gradient(top,  #44ee44 0%,#aaffaa 70%,#44ee44 100%);
+  background: linear-gradient(to bottom,  #44ee44 0%,#aaffaa 70%,#44ee44 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#44ee44', endColorstr='#44ee44',GradientType=0 );
 }
