@@ -1,6 +1,7 @@
 from flask import Flask, render_template, url_for, flash, redirect
 from flask_behind_proxy import FlaskBehindProxy
 from flask_sqlalchemy import SQLAlchemy
+from nytAPI import nyt
 
 
 app = Flask(__name__)
@@ -36,6 +37,14 @@ def randAnime():
         return randAnime()
 
 
+@app.route('/RandomStories')
+def randomStories(): # finally got my read loaded up but it needs a lot of styling and work and stuff like that...
+    random_url = nyt.get_random_url()
+    stories = nyt.get_response(random_url)
+    randStory = nyt.return_random_story(stories)
+    popular_story = nyt.get_popular_stories()
+    info = nyt.display_stories(popular_story, randStory)
+    return render_template("articles.html", text=info)
 
 
 if __name__ == '__main__':
