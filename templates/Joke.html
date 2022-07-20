@@ -1,25 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <title>Joke Generator</title>
-    <link rel="stylesheet" href="static/styles/main.css" />
+    <link rel="stylesheet" href="static/styles/joke.css" />
   </head>
   <body>
-   <a href="http://192.168.0.29:5000/">Home</a>
-  <div class="Anime">
-    <p>{{setup}}</p>
-
-    <p id="demo"></p>
-
     <script>
-      function myFunction() {
-        document.getElementById("demo").innerHTML= "{{punchLine}}"
-      }
-    </script>
-    <button onclick="myFunction()">Click Me For Punchline!</button>
-      <br>
-      <br>
-    <button class="button" onClick="history.go(0);">Generate New Joke</button>
+      function unhide() {
+    var hid = document.getElementsByClassName("invis");
+    // Emulates jQuery $(element).is(':hidden');
+    if(hid[0].offsetWidth > 0 && hid[0].offsetHeight > 0) {
+        hid[0].style.visibility = "visible";
+    }
+}
+</script>
+   <div class="container">
+
+  <h1>IJoke</h1>
+  <h2>An iMessage Joke Generator</h2>
+
+
+  <div class="imessage">
+    <p class="from-them">{{ setup }}</p>
+    <p class="from-me">Not another Dad Joke 😢</p>
+
+    <div class= invis>
+      <p class="from-them">{{ punchLine }}</p>
+    </div>
   </div>
+  <button onclick="unhide()" inline = true;>Show Answer</button>
+  <button onclick="history.go(0);" inline = true;>Generate Joke</button>
+</div>
+
   </body>
 </html>
