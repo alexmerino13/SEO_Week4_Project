@@ -2,16 +2,11 @@ from flask import Flask, render_template, url_for, flash, redirect
 from flask_behind_proxy import FlaskBehindProxy
 from flask_sqlalchemy import SQLAlchemy
 from nytAPI import nyt
-<<<<<<< HEAD
 import kitsupy
 import random
 import requests
-
-=======
-import requests
-import kitsupy
 import os
->>>>>>> Yan
+
 
 app = Flask(__name__)
 
