@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Joke Generator</title>
+    <link rel="stylesheet" href="static/styles/main.css" />
+  </head>
+  <body>
+   <a href="http://192.168.0.29:5000/">Home</a>
+  <div class="Anime">
+    <p>{{setup}}</p>
+
+    <p id="demo"></p>
+
+    <script>
+      function myFunction() {
+        document.getElementById("demo").innerHTML= "{{punchLine}}"
+      }
+    </script>
+    <button onclick="myFunction()">Click Me For Punchline!</button>
+      <br>
+      <br>
+    <button class="button" onClick="history.go(0);">Generate New Joke</button>
+  </div>
+  </body>
+</html>
