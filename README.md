@@ -7,10 +7,17 @@
 
 > API's in use:
 > 1. Article Search API: Search for New York Times articles.
->    * `- Imports to use for this API:`
->    * `-- os, json, requests, random, apiInfo, kitsupy`
+>
 > 2. Most Popular API:	Popular articles on NYTimes.com.
-> 3. Times Wire API:	Real-time feed of NYT article publishes.
-> 4. Top Stories API:	Get articles currently on a section front or the home page.
+>    
+Imports to use for these APIs:
+>    * `import os`
+>    * `import json`
+>    * `import requests`
+>    * `import random`
+>    * `import pandas as pd`
+>    * `import kitsupy`
+>    * `from apiInfo import list_of_news_desk_values, api_key, base_url`
+>    * `from nytAPI import nyt`
 > 5. Dev Joke API: Gets random Programming Jokes.
 > 6. Kitsupy API : Gets information about anime.
