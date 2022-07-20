@@ -30,7 +30,7 @@ def randAnime():
         suggestRating = kitsupy.get_info('anime', rand)['averageRating']
         videoID = kitsupy.get_info('anime', rand)["youtubeVideoId"]
         if videoID == "":
-            trailer = "No trailer available"
+            randAnime()
         else:
             trailer = "https://www.youtube.com/embed/" + videoID
 
