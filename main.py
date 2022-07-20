@@ -3,6 +3,7 @@ from flask_behind_proxy import FlaskBehindProxy
 from flask_sqlalchemy import SQLAlchemy
 from nytAPI import nyt
 
+
 app = Flask(__name__)
 
 proxied = FlaskBehindProxy(app)
