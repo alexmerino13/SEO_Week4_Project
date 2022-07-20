@@ -12,8 +12,10 @@
        h1 {
            font-size:small;
            text-align:center;
-           margin: 10px solid #cf7363;
-           padding: 20px;
+           margin: 10px  #cf7363;
+           padding: 10px;
+           text-transform:underline;
+           
        }
      </style>
  </head>
@@ -21,24 +23,28 @@
       <a href="http://192.168.0.29:5000/">Home</a>
       <h1>Generate articles from the New York Times</h1>
     <div class="Anime">
-        <p>Press this button to generate some stories!</p>
+        <p class="prompt">Press either button below to generate some stories!</p>
         <p id="demo"></p>
+        <p id="demo2"></p>
         <script>
          function getStory() {
-             document.getElementById("demo").innerHTML= "{{stories}}"
+             document.getElementById("demo").innerHTML= "{{rand_url}}"
+             document.getElementById("demo2").innerHTML= "{{rand_story}}"
          }
          function getPopular() {
-             document.getElementById("demo").innerHTML= "{{popStory}}"
+             document.getElementById("demo").innerHTML= "{{pop_url}}"
+             document.getElementById("demo2").innerHTML= "{{pop_story}}"
          }
         </script>
         <br>
           <button onclick="getStory()">Random Story</button>
+          or
           <button onclick="getPopular()">Popular Story</button>
           <br>
           <br>
           <br>
          <button class="button" onClick="history.go(0);">Generate New Stories!</button>
-        <p id='footer'><i><b>Thank you! More to come...!</b></i></p>
+        <p id='footer'><i>We hope you enjoyed these stories! More to come...!</i></p>
     </div>
     </body>
 </html>
