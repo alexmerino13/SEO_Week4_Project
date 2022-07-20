@@ -1,6 +1,7 @@
 from flask import Flask, render_template, url_for, flash, redirect
 from flask_behind_proxy import FlaskBehindProxy
 from flask_sqlalchemy import SQLAlchemy
+import random
 
 
 app = Flask(__name__)
