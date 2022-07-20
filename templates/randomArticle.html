@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Random NYT Article Generator</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="static/styles/main.css">
+        <noscript><link rel="stylesheet" href="static/styles/noscript.css"></noscript>
+    </head>
+    <body>
+        <h1>Generate articles from the New York Times</h1>
+        <h2>Press this button:</h2>
+        <button class="button">Generate</button>
+        <p>There are two articles for you to read:</p>
+        {% block content %} {% endblock %}
+        <br>
+        <p><i><b>Thank you! More to come...!</b></i></p>
+    </body>
+</html>
