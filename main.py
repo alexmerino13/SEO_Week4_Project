@@ -52,8 +52,8 @@ def Joke():
     return render_template("Joke.html", setup=setup, punchLine=punchLine)
 
 
-@app.route('/RandomStories')
-def randomStories(): # finally got my read loaded up but it needs a lot of styling and work and stuff like that...
+@app.route('/read')
+def read(): # finally got my read loaded up but it needs a lot of styling and work and stuff like that...
     random_url = nyt.get_random_url()
     stories = nyt.get_response(random_url)
     randStory = nyt.return_random_story(stories)
