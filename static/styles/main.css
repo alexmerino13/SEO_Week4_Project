@@ -1364,3 +1364,9 @@ h1 {
   background: linear-gradient(to bottom,  #44ee44 0%,#aaffaa 70%,#44ee44 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#44ee44', endColorstr='#44ee44',GradientType=0 );
 }
+.Anime{
+    text-size:100%;
+    text-align: center;
+    color:#39FF14;
+    margin: auto;
+}

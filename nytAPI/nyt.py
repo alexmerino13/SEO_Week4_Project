@@ -102,7 +102,7 @@ def get_response(url: str) -> dict:
             info_list.append(snippet)
             answer[counter] = info_list
             counter += 1
-        
+    
     parse_json(response.json())
 
     return answer
@@ -172,11 +172,18 @@ def generated_story_info(popular_story: tuple, random_story: tuple) -> None:
     # q = engine.execute('SELECT * FROM Stories')
 
 
-def display_stories(pop: tuple, rand: tuple) -> str:
+def display_rand(rand: tuple) -> str:
     """
     Displays generated stories and necessary information about the stories.
     """
-    return f'First story:\n\n\tStory url: {pop[0]}\n\tAbstract: {pop[1]}\n\nSecond story:\n\n\tStory url: {rand[0]}\n\tAbstract: {rand[1]}\n'
+    return f'Random Story:\n\n\tStory url: {rand[0]}\n\tAbstract: {rand[1]}\n'
+
+
+def display_pop(pop: tuple) -> str:
+    """
+    Displays generated stories and necessary information about the stories.
+    """
+    return f'Popular Story: {pop[0]} {pop[1]}'
 
 
 def read():
@@ -197,12 +204,13 @@ def read():
     # getting a random popular New York Times story from the last 30 days
     popular_story = get_popular_stories()
 
-    # displaying the two stories to the user
-    print(display_stories(popular_story, random_story))
-
     # Asks if user liked the stories, adding necessary info to a db
     generated_story_info(popular_story, random_story)
     
 
-# if __name__ == '__main__':
-#     read()
+if __name__ == '__main__':
+    # randurl = get_random_url()
+    # stories = get_response(randurl)
+    read()
+    # print(stories)
+    # print(stories[])

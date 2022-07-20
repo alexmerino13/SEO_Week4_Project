@@ -1,19 +1,50 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Random NYT Article Generator</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-        <link rel="stylesheet" href="static/styles/main.css">
-        <noscript><link rel="stylesheet" href="static/styles/noscript.css"></noscript>
-    </head>
+ <head>
+   <title>Random NYT Article Generator</title>
+    <link rel="stylesheet" href="static/styles/main.css" />
+     <style>
+       p.prompt {
+           font-size:normal;
+           text-align:center;
+           margin: 5px dashed #333333;
+       }
+       h1 {
+           font-size:small;
+           text-align:center;
+           margin: 10px  #cf7363;
+           padding: 10px;
+           text-transform:underline;
+           
+       }
+     </style>
+ </head>
     <body>
-        <h1>Generate articles from the New York Times</h1>
-        <h2>Press this button:</h2>
-        <button class="button">Generate</button>
-        <p>There are two articles for you to read:</p>
-        {% block content %} {% endblock %}
+      <a href="http://192.168.0.29:5000/">Home</a>
+      <h1>Generate articles from the New York Times</h1>
+    <div class="Anime">
+        <p class="prompt">Press either button below to generate some stories!</p>
+        <p id="demo"></p>
+        <p id="demo2"></p>
+        <script>
+         function getStory() {
+             document.getElementById("demo").innerHTML= "{{rand_url}}"
+             document.getElementById("demo2").innerHTML= "{{rand_story}}"
+         }
+         function getPopular() {
+             document.getElementById("demo").innerHTML= "{{pop_url}}"
+             document.getElementById("demo2").innerHTML= "{{pop_story}}"
+         }
+        </script>
         <br>
-        <p><i><b>Thank you! More to come...!</b></i></p>
+          <button onclick="getStory()">Random Story</button>
+          or
+          <button onclick="getPopular()">Popular Story</button>
+          <br>
+          <br>
+          <br>
+         <button class="button" onClick="history.go(0);">Generate New Stories!</button>
+        <p id='footer'><i>We hope you enjoyed these stories! More to come...!</i></p>
+    </div>
     </body>
 </html>
