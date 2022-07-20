@@ -2,6 +2,9 @@ from flask import Flask, render_template, url_for, flash, redirect
 from flask_behind_proxy import FlaskBehindProxy
 from flask_sqlalchemy import SQLAlchemy
 from nytAPI import nyt
+import kitsupy
+import random
+import requests
 
 
 app = Flask(__name__)
@@ -21,7 +24,6 @@ def about():
 @app.route('/RandomAnime')
 def randAnime():
     try:
-
         rand = random.randint(1, 50000)
         suggest = kitsupy.get_info('anime', rand)['titles']['en']
         suggestRating = kitsupy.get_info('anime', rand)['averageRating']
@@ -34,7 +36,7 @@ def randAnime():
         # suggestImg = kitsupy.get_info('anime', rand)['posterImage']['tiny']
 
         return render_template("randomAnime.html", anime="Anime: " + suggest,
-                               rating="\nRating: " + suggestRating + "/100", trailer=trailer)
+                                rating="\nRating: " + suggestRating + "/100", trailer=trailer)
     except:
         return randAnime()
 
@@ -61,8 +63,6 @@ def read(): # finally got my read loaded up but it needs a lot of styling and wo
     popular_story = nyt.get_popular_stories()
     info = nyt.display_stories(popular_story, randStory)
     return render_template("articles.html", text=info)
-
-
 
 
 if __name__ == '__main__':
