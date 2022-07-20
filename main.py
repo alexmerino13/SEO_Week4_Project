@@ -30,10 +30,26 @@ def randAnime():
         else:
             trailer = "https://www.youtube.com/embed/" + videoID
 
+        # suggestImg = kitsupy.get_info('anime', rand)['posterImage']['tiny']
+
         return render_template("randomAnime.html", anime="Anime: " + suggest,
                                rating="\nRating: " + suggestRating + "/100", trailer=trailer)
     except:
         return randAnime()
+
+
+@app.route('/Joke')
+def Joke():
+    url = "https://backend-omega-seven.vercel.app/api/getjoke"
+
+    payload = {}
+    headers = {}
+
+    response = requests.request("GET", url, headers=headers, data=payload)
+
+    setup = response.json()[0]['question']
+    punchLine = response.json()[0]['punchline']
+    return render_template("Joke.html", setup=setup, punchLine=punchLine)
 
 
 
