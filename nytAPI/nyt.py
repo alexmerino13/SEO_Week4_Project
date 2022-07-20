@@ -102,7 +102,7 @@ def get_response(url: str) -> dict:
             info_list.append(snippet)
             answer[counter] = info_list
             counter += 1
-        
+    
     parse_json(response.json())
 
     return answer
@@ -204,5 +204,9 @@ def read():
     generated_story_info(popular_story, random_story)
     
 
-# if __name__ == '__main__':
-#     read()
+if __name__ == '__main__':
+    # randurl = get_random_url()
+    # stories = get_response(randurl)
+    read()
+    # print(stories)
+    # print(stories[])

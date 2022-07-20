@@ -2,10 +2,16 @@ from flask import Flask, render_template, url_for, flash, redirect
 from flask_behind_proxy import FlaskBehindProxy
 from flask_sqlalchemy import SQLAlchemy
 from nytAPI import nyt
+<<<<<<< HEAD
 import kitsupy
 import random
 import requests
 
+=======
+import requests
+import kitsupy
+import os
+>>>>>>> Yan
 
 app = Flask(__name__)
 
@@ -56,13 +62,13 @@ def Joke():
 
 
 @app.route('/read')
-def read(): # finally got my read loaded up but it needs a lot of styling and work and stuff like that...
+def read():
     random_url = nyt.get_random_url()
     stories = nyt.get_response(random_url)
     randStory = nyt.return_random_story(stories)
     popular_story = nyt.get_popular_stories()
     info = nyt.display_stories(popular_story, randStory)
-    return render_template("articles.html", text=info)
+    return render_template("randomArticle.html", stories=randStory, popStory=popular_story)
 
 
 if __name__ == '__main__':
