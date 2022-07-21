@@ -9,17 +9,20 @@
 	</head>
     <body>
     <div class="Anime">
+        <div class="backButton">
+		    <a href="/menu"><i class="icon solid tooltip fa-arrow-left"></i></a>
+        </div>
         <h1 >Random Anime Generator</h1>
         <a href="/menu">Back</a>
         <p>{{ anime }}</p>
         <p>{{ rating }}</p>
 
-        <iframe width="420" height="315"
+        <iframe style="border: 3px solid #fff;" width="420" height="315"
         src= {{ trailer }}>
         </iframe>
         <br></br>
         <br></br>
         
-        <button class="button" onClick="history.go(0);">Generate</button>
+        <button class="button pulseBox button3" onClick="history.go(0);">Generate</button>
     </div>
     </body>

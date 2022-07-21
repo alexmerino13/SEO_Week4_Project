@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
-@import url("fontawesome-all.min.css");
+@import url("//use.fontawesome.com/releases/v5.15.3/css/all.css");
 
 /*
 	Aerial by HTML5 UP
@@ -1369,4 +1369,9 @@ h1 {
     text-align: center;
     color:#39FF14;
     margin: auto;
+}
+
+.backButton{
+	float: left;
+	margin-left: 1em;
 }
