@@ -1371,7 +1371,15 @@ h1 {
     margin: auto;
 }
 
+
 .backButton{
 	float: left;
 	margin-left: 1em;
+
+.NYT {
+	text-size:75%;
+	text-align: left;
+	color: #39FF15;
+	margin: auto;
+
 }
