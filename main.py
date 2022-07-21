@@ -71,5 +71,28 @@ def read():
                             pop_story="Abstract: " + popularstory[1])
 
 
+@app.route('/Funfact')
+def funfacts():
+    url = 'https://asli-fun-fact-api.herokuapp.com/'
+    payload = {}
+    headers = {}
+
+    response = requests.request("GET", url, headers=headers, data=payload)
+    data = response.json()
+    about = data["data"]["cat"]
+    fact = data["data"]["fact"]
+    fact_data = [about, fact]
+    setup = ''
+    if fact_data[0] == 'sea':
+        setup = 'Did you know this about the sea??'
+    elif fact_data[0] == 'human':
+        setup = 'Did you know this about humans??'
+    elif fact_data[0] == 'auto':
+        setup = 'Did you know this about automobiles??'
+    else:
+        setup = f'Did you know this about {fact_data[0]}??'
+    return render_template("funfacts.html", about=fact_data[0], fact=fact_data[1])
+
+
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0")
