@@ -211,9 +211,9 @@ def read():
     generated_story_info(popular_story, random_story)
     
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
     # randurl = get_random_url()
     # stories = get_response(randurl)
-    read()
+    # read()
     # print(stories)
     # print(stories[])
