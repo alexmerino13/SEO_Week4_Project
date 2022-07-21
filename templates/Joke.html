@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Joke Generator</title>
     <link rel="stylesheet" href="static/styles/joke.css" />
+    <link rel="stylesheet" href="static/styles/main.css" />
+		<noscript><link rel="stylesheet" href="static/styles/noscript.css" /></noscript>
   </head>
   <body>
     <script>
@@ -15,24 +17,28 @@
     }
 }
 </script>
-   <div class="container">
-
-  <h1>IJoke</h1>
-  <h2>An iMessage Joke Generator</h2>
-  <a href="/menu">Back</a>
-
-
-  <div class="imessage">
-    <p class="from-them">{{ setup }}</p>
-    <p class="from-me">Not another Dad Joke 😢</p>
-
-    <div class= invis>
-      <p class="from-them">{{ punchLine }}</p>
-    </div>
+  <div id="menu_bg"></div>
+			<div id="main">
+        <a href="/menu"><i class="backButton icon solid tooltip fa-arrow-left"></i></a>
+          <header id="header">
+            <div class="container">
+              <h1 class = "neon">Joke's On You</h1>
+              <h2 class = "Anime">An iMessage Joke Generator</h2>
+                <div class="container1">
+                  <div class="imessage" style= "border: 3px solid #D3D3D3;">
+                    <p class="from-them">{{ setup }}</p>
+                    <p class="from-me">Not another Dad Joke 😢</p>
+                    <div class= invis>
+                      <p class="from-them">{{ punchLine }}</p>
+                    </div>
+                  </div>
+                </div>
+              <button class="jokeButton pulseBox button3" onclick="unhide()" inline = true;>Punch Line</button>
+             <button class="jokeButton pulseBox button3" onclick="history.go(0);" inline = true;>Generate Joke</button>
+            </div>
+          </header>
+      </div>
   </div>
-  <button onclick="unhide()" inline = true;>Show Answer</button>
-  <button onclick="history.go(0);" inline = true;>Generate Joke</button>
-</div>
 
   </body>
 </html>
