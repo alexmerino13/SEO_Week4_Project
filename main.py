@@ -71,7 +71,7 @@ def read():
                             pop_story="Abstract: " + popularstory[1])
 
 
-@app.route('/Funfact')
+@app.route('/funfact')
 def funfacts():
     url = 'https://asli-fun-fact-api.herokuapp.com/'
     payload = {}
