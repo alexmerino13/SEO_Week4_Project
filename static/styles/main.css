@@ -1183,11 +1183,11 @@ html, body {
 	height: auto;
 	width: auto;
 	position: inherit;
-	background-color: rgb(200, 84, 49);
+	background-color:white;
 	inline-size: 700px;
     overflow-wrap: break-word;
     hyphens: manual;
-	color: white;
+	color: black;
 	padding: 1em;
 	text-shadow:
     /* White glow */

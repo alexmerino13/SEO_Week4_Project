@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="static/styles/main.css" />
     <noscript><link rel="stylesheet" href="static/styles/noscript.css" /></noscript>
   </head>
-  <body>
+  <body onLoad="displayFact()">
       <div id="menu_bg"></div>
         <div id="main">
           <a href="/menu"><i class="backButton icon solid tooltip fa-arrow-left"></i></a>
@@ -20,9 +20,7 @@
                 <p id="d1"></p>
                 <p id="d2"></p>
               </div>
-            <button class="factButton pulseBox button3" onclick="displayFact()">Get Fact</button>
-            <br></br>
-            <button class="factButton pulseBox button3" onClick="history.go(0);">Reset</button>
+            <button class="factButton pulseBox button3" onClick="history.go(0);">Get Fact</button>
           </header>
         </div>
     <script>
