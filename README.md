@@ -1,5 +1,8 @@
 # SEO_Week4_Project
 
+## Workflows
+![example_workflow](https://github.com/alexmerino13/SEO_Week4_Project/actions/workflows/lintntest.yaml/badge.svg)
+
 ## API's in use:
 > 1. Article Search API: Search for New York Times articles.
 > 2. Most Popular API:	Popular articles on NYTimes.com.
