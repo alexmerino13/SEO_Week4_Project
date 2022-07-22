@@ -11,6 +11,7 @@ import os
 app = Flask(__name__)
 
 proxied = FlaskBehindProxy(app)
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 
 
 @app.route("/")
