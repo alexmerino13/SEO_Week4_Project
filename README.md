@@ -1,7 +1,7 @@
 # SEO_Week4_Project
 
 ## Workflows
-![example_workflow](https://github.com/alexmerino13/SEO_Week4_Project/actions/workflows/lintntest.yaml/badge.svg)
+![example_workflow](https://github.com/alexmerino13/SEO_Week4_Project/actions/workflows/lintntest.yaml/badge.svg?event=push)
 
 ## API's in use:
 > 1. Article Search API: Search for New York Times articles.
