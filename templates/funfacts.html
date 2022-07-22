@@ -6,33 +6,6 @@
     <link rel="stylesheet" href="static/styles/main.css" />
     <noscript><link rel="stylesheet" href="static/styles/noscript.css" /></noscript>
   </head>
-<<<<<<< HEAD
-    <body onLoad="displayFact()">
-      <div id="menu_bg">
-          <div id="main">
-            <a href="/menu"><i class="backButton icon solid tooltip fa-arrow-left"></i></a>
-          </div>
-      </div>
-        <header id="header">
-          <h1 class="neon">Knowledge Acquisition Center</h1>
-            <div class="container1 article-container">
-              <p id="about"></p>
-              <p id="fact"></p>
-            </div>
-            <h3>Press the button below for a random fact!</h3>
-            <br><br>
-            <button class="button pulseBox button3" onclick="displayFact()">Get Fact</button>
-            <button class="button pulseBox button3" onClick="history.go(0);">Reset</button>
-        </header>
-      
-      <script>
-        function displayFact() {
-            document.getElementById("about").innerHTML= "{{about}}"
-            document.getElementById("fact").innerHTML= "{{fact}}"
-        }
-      </script>
-    
-=======
   <body>
       <div id="menu_bg"></div>
         <div id="main">
@@ -49,10 +22,7 @@
               </div>
             <button class="factButton pulseBox button3" onclick="displayFact()">Get Fact</button>
             <br></br>
-            <br></br>
-            <h3 class="greenText">Press the button below to reload the fact generator!</h3>
-            <br></br>
-            <button class="button" onClick="history.go(0);">Reset</button>
+            <button class="factButton pulseBox button3" onClick="history.go(0);">Reset</button>
           </header>
         </div>
     <script>
@@ -61,6 +31,5 @@
             document.getElementById("d2").innerHTML= "{{fact}}"
         }
       </script>
->>>>>>> eead887a3af5a069e6eede94be985e0a8f80e375
   </body>
 </html>
