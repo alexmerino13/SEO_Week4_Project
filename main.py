@@ -58,14 +58,10 @@ def Joke():
 
 @app.route('/read')
 def read():
-    random_url = nyt.get_random_url() # random story url generated
-    stories = nyt.get_response(random_url) # list of random stories and urls
-    randStory = nyt.return_random_story(stories) # single tuple with url at index 0 and abstract at index 1
-    popularstory = nyt.get_popular_stories() # single tuple with Popular story url at index 0 and abstract at index 1
-    # randStory and popularstory use two different endpoints on the NYT API. That explains the odd styling for my render_template
-    # The "Generate New Stories" button resets the webpage and allows for two new stories to be generated
-    # on very rare (extremely rare) occassions - the randStory will return without an abstract, simply is a function of how the data is entered in the NYT API
-    ## no cause for concern^^ just should reset and regenerate stories
+    random_url = nyt.get_random_url()
+    stories = nyt.get_response(random_url)
+    randStory = nyt.return_random_story(stories)
+    popularstory = nyt.get_popular_stories()
     return render_template("randomArticle.html", rand_url="Random Story url: " +randStory[0], 
                             rand_story="Abstract: " + randStory[1], pop_url="Popular Story url: " + popularstory[0], 
                             pop_story="Abstract: " + popularstory[1])
@@ -91,7 +87,7 @@ def funfacts():
         setup = 'Did you know this about automobiles??'
     else:
         setup = f'Did you know this about {fact_data[0]}??'
-    return render_template("funfacts.html", about=fact_data[0], fact=fact_data[1])
+    return render_template("funfacts.html", about=setup, fact=fact_data[1])
 
 
 if __name__ == '__main__':

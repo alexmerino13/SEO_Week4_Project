@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Fun Facts Generator</title>
     <meta charset="UTF-8">
+    <title>Fun Facts Generator</title>
     <link rel="stylesheet" href="static/styles/main.css" />
-    <!-- <noscript><link rel="stylesheet" href="static/styles/noscript.css" /></noscript> -->
+    <noscript><link rel="stylesheet" href="static/styles/noscript.css" /></noscript>
   </head>
+<<<<<<< HEAD
     <body onLoad="displayFact()">
       <div id="menu_bg">
           <div id="main">
@@ -31,5 +32,35 @@
         }
       </script>
     
+=======
+  <body>
+      <div id="menu_bg"></div>
+        <div id="main">
+          <a href="/menu"><i class="backButton icon solid tooltip fa-arrow-left"></i></a>
+      
+          <header id="header">
+
+            <h1 class="neon special">Knowledge Acquisition Center</h1>
+              <br></br>
+              <h2 class="neon">Below, use the fact generator for a mind-blowing fact!</h2>
+              <div class="container1 fact-container">
+                <p id="d1"></p>
+                <p id="d2"></p>
+              </div>
+            <button class="factButton pulseBox button3" onclick="displayFact()">Get Fact</button>
+            <br></br>
+            <br></br>
+            <h3 class="greenText">Press the button below to reload the fact generator!</h3>
+            <br></br>
+            <button class="button" onClick="history.go(0);">Reset</button>
+          </header>
+        </div>
+    <script>
+          function displayFact() {
+            document.getElementById("d1").innerHTML= "{{about}}"
+            document.getElementById("d2").innerHTML= "{{fact}}"
+        }
+      </script>
+>>>>>>> eead887a3af5a069e6eede94be985e0a8f80e375
   </body>
 </html>

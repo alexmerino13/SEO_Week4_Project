@@ -6,11 +6,10 @@
     </head>
     
     <body onLoad="getStory()">
-      <div id="menu_bg">
+      <div id="menu_bg"></div>
         <div id="main">
           <a href="/menu"><i class="backButton icon solid tooltip fa-arrow-left"></i></a>
-        </div>
-      </div>
+      
         <header id="header">
           <h1 class="neon">Random Article Generator</h1>
             <h2 class="greenText">Press either button below to generate some stories!</p>
@@ -23,6 +22,7 @@
             <br></br>
             <button class="button" onClick="history.go(0);">Generate New Stories!</button>
         </header>    
+        </div>
     <script>
          function getStory() {
              document.getElementById("demo").innerHTML= "{{rand_url}}"
