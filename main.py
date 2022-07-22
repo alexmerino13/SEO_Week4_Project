@@ -18,13 +18,13 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 @app.route("/home")
 def home():
     return render_template('home.html', subtitle='Home Page',
-                            text='This is the home page')
+                           text='This is the home page')
 
 
 @app.route("/menu")
 def about():
     return render_template('menu.html', subtitle='Menu',
-                            text='This is a menu page')
+                           text='This is a menu page')
 
 
 @app.route('/RandomAnime')
@@ -42,8 +42,9 @@ def randAnime():
 # suggestImg = kitsupy.get_info('anime', rand)['posterImage']['tiny']
 
         return render_template("randomAnime.html", anime="Anime: " + suggest,
-                            rating="\nRating: " + suggestRating + "/100", trailer=trailer)
-    except:
+                               rating="\nRating: " + suggestRating + "/100",
+                               trailer=trailer)
+    except Error:
         return randAnime()
 
 
@@ -67,9 +68,11 @@ def read():
     stories = nyt.get_response(random_url)
     randStory = nyt.return_random_story(stories)
     popularstory = nyt.get_popular_stories()
-    return render_template("randomArticle.html", rand_url="Random Story url: " + randStory[0],
-                            rand_story="Abstract: " + randStory[1], pop_url="Popular Story url: " + popularstory[0],
-                            pop_story="Abstract: " + popularstory[1])
+    return render_template("randomArticle.html",
+                           rand_url="Random Story url: " + randStory[0],
+                           rand_story="Abstract: " + randStory[1],
+                           pop_url="Popular Story url: " + popularstory[0],
+                           pop_story="Abstract: " + popularstory[1])
 
 
 @app.route('/funfact')
