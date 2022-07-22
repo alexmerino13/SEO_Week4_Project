@@ -1,8 +1,9 @@
-import pytest
+# import pytest
 
-from app import app as flask_app  ##
+# from app import app as flask_app  ##
 
 
-@pytest.fixture
-def app():
-    pass
+# @pytest.fixture
+# def app():
+#     pass
+#  to be edited
